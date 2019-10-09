@@ -1,0 +1,11 @@
+{
+  "name": "workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss:watch": "sass --no-source-map --watch ./src/scss/_index.scss:./build/styles.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
