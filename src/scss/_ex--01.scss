@@ -1,9 +1,217 @@
-// VARIABLES EXAMPLE
+// @use 'sass:color';
+
+// ------------------ VARIABLES ------------------
 
 $primary: #456fba;
+$white: #fff;
 $padding: 8px;
 
-.btn {
-  background-color: $primary;
-  padding: 0.75 * 8px 1.5 * $padding;
-}
+// .btn {
+//   background-color: $primary;
+//   padding: 0.75 * 8px 1.5 * $padding;
+//   color: $white;
+//   font-size: 1rem;
+// }
+// ------------------ OPERATORS ------------------
+// @if @else
+// Loops: @each, @for, @while
+
+// generate header
+
+// $size: 16px;
+// $golden-ration: 1.314;
+// $h: 1;
+// $n: 6;
+// %letter-space-1 {
+//   letter-spacing: 1px;
+// }
+// @while $h + 1 <= $n {
+//   h#{($n - $h)} {
+//     font-size: $size;
+//     font-weight: 500;
+//     @extend %letter-space-1;
+//   }
+//   $h: $h + 1;
+//   $size: $size * $golden-ration;
+// }
+
+// ------------------ NESTING ------------------
+
+// .buttons-wrapper {
+//   border: dashed thin red;
+//   background-color: #fafafa;
+//   padding: 2 * $padding;
+
+//   .btn {
+//     background-color: $primary;
+//     padding: $padding * 0.8 $padding * 1.5;
+//     color: $white;
+//     font-size: 0.75rem;
+//     display: inline-block;
+//     margin-right: $padding;
+//     line-height: 1rem;
+//     border: thin solid $primary;
+//     border-radius: 3px;
+//     cursor: pointer;
+//     text-transform: uppercase;
+//     font-weight: 600;
+//     transition: all 0.2s ease;
+//     &:hover {
+//       background-color: lighten($primary, 15%);
+//     }
+//     // i {
+//     //   font-size: 1rem;
+//     //   color: red;
+//     //   padding-right: 8px;
+//     //   margin-left: -4px;
+//     //   line-height: 1rem;
+//     // }
+//     // &::before {
+//     //   content: '✖';
+//     // }
+//     &:first-child {
+//       border: 3px dotted red;
+//     }
+//   }
+//   .btn-small {
+//     font-size: 0.6rem;
+//     padding: $padding * 0.5 $padding;
+//   }
+
+//   .btn-large {
+//     font-size: 1rem;
+//     padding: $padding $padding * 2.5;
+//   }
+// }
+
+// ------------------ PARTIALS ------------------
+// @import './buttons';
+
+// ------------------ MIXINS ------------------
+
+// @mixin btn($size) {
+//   background-color: $primary;
+//   color: $white;
+//   display: inline-block;
+//   margin: $padding;
+//   line-height: 1rem;
+//   border: thin solid $primary;
+//   border-radius: 3px;
+//   position: relative;
+//   cursor: pointer;
+//   text-transform: uppercase;
+//   font-weight: 600;
+//   transition: all 0.2s ease;
+//   @if $size == 'small' {
+//     padding: $padding * 0.5 $padding * 1.2;
+//     font-size: 0.5rem;
+//   } @else if $size == 'default' {
+//     padding: $padding $padding * 2.2;
+//     font-size: 0.75rem;
+//   } @else if $size == 'large' {
+//     padding: $padding * 1.1 $padding * 3;
+//     font-size: 0.9rem;
+//   }
+//   &:hover {
+//     background-color: lighten($primary, 5%);
+//   }
+//   &:active {
+//     box-shadow: inset 0px 0px 1px 1px darken($primary, 90%);
+//   }
+//   &:focus {
+//     outline: 0;
+//   }
+// }
+
+// .btn1 {
+//   @include btn('small');
+// }
+
+// .btn2 {
+//   @include btn('default');
+// }
+// .btn3 {
+//   @include btn('large');
+// }
+
+// ------------------ Inheritance/exclude ------------------
+// .primary-bg {
+//   background-color: $primary;
+// }
+// .white-text {
+//   color: $white;
+// }
+// .btn-large {
+//   @extend .btn, .primary-bg, .white-text;
+//   padding: $padding * 0.8 $padding * 2.4;
+//   font-size: 0.9rem;
+//   line-height: 0.9rem;
+// }
+// ------------------ Operators ------------------
+// .btn {
+//   @extend .primary-bg, .white-text;
+//   padding: $padding / 1.5 $padding * 2.5;
+//   display: inline-block;
+//   font-size: 0.7rem;
+//   line-height: 0.7rem;
+// }
+
+// ------------------ Maps /List ------------------
+// LISTS
+// $colors: red, blue;
+
+// @each $col in $colors {
+//   .btn-#{$col} {
+//     font-size: 1rem;
+//     color: #fff;
+//     background-color: $col;
+//     border: thin solid $col;
+//     border-radius: 3px;
+//     padding: 6px 12px 8px 12px;
+//   }
+// }
+
+// MAPS
+// $breakpoints: (
+//   sm: 368px,
+//   md: 668px,
+//   lg: 1024px
+// );
+
+// @function getWidth($size) {
+//   @if $size == 'sm' {
+//     @return 340px;
+//   } @else if $size == 'md' {
+//     @return 640px;
+//   } @else if $size == 'lg' {
+//     @return 998px;
+//   }
+// }
+
+// @each $point, $val in $breakpoints {
+//   @media screen and(max-width: $val) {
+//     .container-#{$point} {
+//       max-width: getWidth($point);
+//     }
+//   }
+// }
+// ------------------ Functions ------------------
+
+// $colors: (
+//   'primary': red,
+//   'secondary': blue
+// );
+
+// @function getColor($type: 'primary') {
+//   @return map-get($map: $colors, $key: $type);
+// }
+
+// .btn {
+//   box-sizing: border-box;
+//   padding: 6px 18px;
+//   color: #fff;
+//   border: 0;
+//   border-radius: 3px;
+//   font-size: 14px;
+//   background-color: getColor('secondary');
+// }
