@@ -1,0 +1,9 @@
+// VARIABLES EXAMPLE
+
+$primary: #456fba;
+$padding: 8px;
+
+.btn {
+  background-color: $primary;
+  padding: 0.75 * 8px 1.5 * $padding;
+}
