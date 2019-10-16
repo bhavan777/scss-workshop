@@ -1,0 +1,18 @@
+$breakpoints: (
+  xs: 0px,
+  sm: 336px,
+  md: 668px,
+  lg: 1024px
+);
+
+$grid-size: 12;
+@each $key, $bp in $breakpoints {
+  @media screen and (min-width: $bp) {
+    @for $i from 1 through $grid-size {
+      $w: ($i * 100%) / $grid-size;
+      .col-#{key}-#{$i} {
+        width: $w;
+      }
+    }
+  }
+}
