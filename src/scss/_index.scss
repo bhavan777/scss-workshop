@@ -1,3 +1,7 @@
+$primary: #4588ff;
+$secondary: #ff4567;
+$opaq-black-2: rgba(0, 0, 0, 0.2);
+$opaq-black-3: rgba(0, 0, 0, 0.3);
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +23,7 @@ body {
   display: flex;
 }
 %bg-primary {
-  background-color: #4588ff;
+  background-color: $primary;
 }
 %color-white {
   color: #fff;
@@ -93,15 +97,15 @@ ul.nav li:last-child {
 
 ul.nav li a {
   @extend %pad-regular, %br-reg, %fw-600;
-  border: thin solid rgba(0, 0, 0, 0.2);
+  border: thin solid $opaq-black-2;
   color: #dddddd;
   text-decoration: none;
 }
 
 ul.nav li a:hover {
   @extend %color-white;
-  border: thin solid rgba(0, 0, 0, 0.3);
-  background-color: rgba(0, 0, 0, 0.3);
+  border: thin solid $opaq-black-3;
+  background-color: $opaq-black-3;
 }
 
 .cards {
@@ -139,7 +143,7 @@ ul.nav li a:hover {
 }
 
 .card-title {
-  color: #ff4567;
+  color: $secondary;
 }
 
 .card-details {
@@ -152,8 +156,7 @@ ul.nav li a:hover {
 .card:hover {
   cursor: pointer;
   transform: translateY(-3px);
-  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.3),
-    0px -1px 4px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 4px 0px $opaq-black-3, 0px -1px 4px 0px $opaq-black-2;
   @extend %transition-all-200;
 }
 
@@ -171,11 +174,11 @@ ul.nav li a:hover {
 }
 
 .btn-primary {
-  border: thin solid #4588ff;
+  border: thin solid $primary;
   @extend %bg-primary;
 }
 
 .btn-secondary {
-  background-color: #ff4567;
-  border: thin solid #ff4567;
+  background-color: $secondary;
+  border: thin solid $secondary;
 }

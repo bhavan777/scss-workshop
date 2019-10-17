@@ -6,7 +6,7 @@
   "author": "Bhavan Kuchibhotla",
   "license": "ISC",
   "scripts": {
-    "build": "node-sass src/scss/_index.scss build/styles.css --output-style compressed",
+    "build": "node-sass src/scss/_index.scss build/styles.css",
     "dev": "nodemon -e scss -x \"npm run build\""
   },
   "dependencies": {
