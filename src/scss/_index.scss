@@ -14,17 +14,29 @@ body {
   padding-top: 80px;
 }
 
-header {
+.flex-center-sread {
   display: flex;
-  background-color: #4588ff;
-  color: #fff;
-  height: 70px;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
+  align-items: center;
   justify-content: space-between;
+}
+.fixed-0-0 {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.full-width {
+  width: 100%;
+}
+.bg-primary {
+  background-color: #4588ff;
+}
+.text-white {
+  color: #fff;
+}
+
+.header {
+  height: 70px;
+  z-index: 1;
   padding: 12px calc((100vw - 1180px) * 0.5);
   align-items: center;
 }
