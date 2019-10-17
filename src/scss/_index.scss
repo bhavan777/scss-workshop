@@ -19,11 +19,6 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.fixed-0-0 {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
 .full-width {
   width: 100%;
 }
@@ -39,6 +34,9 @@ body {
   z-index: 1;
   padding: 12px calc((100vw - 1180px) * 0.5);
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 ul.nav {
   display: flex;
