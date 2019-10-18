@@ -12,3 +12,14 @@ OOCSS Intro : https://www.keycdn.com/blog/oocss
 Atomic CSS: https://acss.io/
 BEM: http://getbem.com/
 SMACSS: http://smacss.com/
+
+
+
+a sample site is built in paradigms branch., clone , checkout, npm install, npm run build, source is in src/styles directory,  output is in build folder
+
+
+SMACSS branch has implemetation of the smaple site in SMACSS methodology
+
+bem branch has the same using BEM
+
+@paradigms/dry-css,@paradigms/acss has dry priciples used for the same sample website using dry and Atomic methodologies
