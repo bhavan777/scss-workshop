@@ -6,11 +6,9 @@
   "author": "Bhavan Kuchibhotla",
   "license": "ISC",
   "scripts": {
-    "build": "node-sass src/scss/_index.scss build/styles.css --output-style compressed",
-    "dev": "nodemon -e scss -x \"npm run build\""
+    "build": "node-sass src/scss/_index.scss build/styles.css"
   },
   "dependencies": {
-    "node-sass": "^4.12.0",
-    "nodemon": "^1.19.3"
+    "node-sass": "^4.12.0"
   }
 }
